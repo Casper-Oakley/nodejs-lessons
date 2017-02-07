@@ -59,7 +59,7 @@
 \title{Programming with NodeJS}
 
 % A subtitle is optional and this may be deleted
-\subtitle{Lesson 1: Setting up, the event loop and callback functions}
+\subtitle{Lesson 1: Setting up, JS basics and hello world}
 
 %\author{F.~Author\inst{1} \and S.~Another\inst{2}}
 % - Give the names in the same order as the appear in the paper.
@@ -169,8 +169,115 @@ Some options include:
   \pause
   \item GNU Emacs
   \pause
+  \item Sublime
+  \pause
   \item atom \pause - Fun fact, this was actually written in part in NodeJS!
 \end{itemize}
+\end{frame}
+
+\section{JS basics}
+
+\begin{frame}{JS basics}
+
+\end{frame}
+
+\begin{frame}{Javascript types}
+
+As with most common languages, the javascript engine contains primitive types:
+\pause
+\begin{itemize}
+ \item Number\pause 
+ \item String\pause
+ \item Boolean\pause
+ \item Undefined\pause
+ \item Null
+\end{itemize}
+\pause
+Javascript also has implicit objects, which contain all other types
+
+\end{frame}
+
+\begin{frame}{Javascript types}
+
+Other types:
+\pause
+\begin{itemize}
+ \item Arrays\pause 
+ \item JSON\pause
+ \item Buffers\pause
+ \item Streams\pause
+ \item Higher order functions
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Javascript syntax}
+
+Javascript syntax is C-like, with a soft type system.\\
+\pause
+Variables are initialised with \textit{var}, though if not instantiated via \textit{var} will be assumed to be global.\\
+\pause
+Lines are not required to be delimited with a \textit{\;}, though most standards strongly recommend it (and bugs can creep in without it).\\
+\pause
+As with C, javascript contains for loops, while loops, conditional statements (both single expression ternary and expanded) and switches.
+
+\end{frame}
+
+\begin{frame}{JavaScript Object Notation (JSON)}
+
+JavaScript Object Notation (JSON) is a standard originally built for javascript which provides simple, logical packaging of data into a data structure, which can in turn be converted into a string and back again.\\
+\pause
+Elements in JSON are key-value pairs, where the key must be a string and the value can be any of the primitive types.\\
+\pause
+JSONs are defined through curly braces \{\}.\\
+\pause
+For example:
+\begin{figure}[h]
+\includegraphics[width=0.4\textwidth]{json}
+\end{figure}
+
+\end{frame}
+
+
+\section{Web Servers}
+
+\begin{frame}{What is a web server?}
+
+\pause
+A web server is \pause something which \textbf{serves} you things. \pause \\
+
+When you go on a website, you, the client, ask a server for something.\pause
+This file could be an html document, an image or something completely different.
+
+\end{frame}
+
+\begin{frame}{HTTP requests}
+
+\pause Specifically, you send the server an HTTP request. What is HTTP? \pause \\
+HTTP - HyperTextTransferProtocol \pause - The protocol which the world wide web relies on \\
+
+\pause There are many types of HTTP request. The most common two used are:
+\begin{itemize}
+  \item[] GET\pause \qquad gets you data from a location/service\pause
+   \item[] POST\pause \qquad sends your data to a location/service
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{A little more on HTTP}
+
+\pause
+Status code responses\pause
+\begin{itemize}
+  \item 200\pause
+  \item 304\pause
+  \item 400\pause
+  \item 401\pause
+  \item 403\pause
+  \item 404\pause
+  \item 500
+  \end{itemize}
+
 \end{frame}
 
 % Placing a * after \section means it will not show in the
@@ -207,6 +314,44 @@ demo
 \end{frame}
 
 
+\begin{frame}{A hello world server}
+
+\begin{figure}[h]
+\includegraphics[width=0.9\textwidth]{helloworld}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{A hello world server}
+
+Our basic hello world server consists of three primary parts
+
+\end{frame}
+
+\begin{frame}{A hello world server}
+
+\begin{figure}[h]
+\includegraphics[width=0.9\textwidth]{helloworld2}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{A hello world server}
+
+\begin{figure}[h]
+\includegraphics[width=0.9\textwidth]{helloworld3}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{A hello world server}
+
+\begin{figure}[h]
+\includegraphics[width=0.9\textwidth]{helloworld4}
+\end{figure}
+
+\end{frame}
+
 \begin{frame}{NPM: node package manager}
 
 NodeJS's strengths lie mainly in it's ability to route information from places to other places, not to do heavy computation/store data/render stuff.
@@ -217,13 +362,19 @@ The Node Package Manager (NPM) sources all kinds of packages for NodeJS, each of
 
 \end{frame}
 
+\begin{frame}{Emoji demo}
+
+\end{frame}
+
+\section{Summary}
+
 \begin{frame}{That's all for tonight!}
   To summarise:
   \begin{itemize}
-  \item We have installed Python and PyCharm
-  \item We have learnt about variables and variable types
-  \item We have learnt about printing and asking for input from the user
-  \item We have made a sweet ass calculator!
+  \item We have installed NodeJS and NPM
+  \item We have learnt about JS syntax
+  \item We have learnt about NodeJS and what it's useful for
+  \item We have made a very simple http server
   \end{itemize}
 \end{frame}
 
