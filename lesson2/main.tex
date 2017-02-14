@@ -188,7 +188,7 @@ There are two types of functionality we will want in our program. They are:
 
 \pause
 
-This disctinction is important for NodeJS as it defines which bits NodeJS can do seemingly concurrently and which it won't be able to do well.
+This distinction is important for NodeJS as it defines which bits NodeJS can do seemingly concurrently and which it won't be able to do well.
 
 \end{frame}
 
@@ -204,9 +204,115 @@ The "bit of code" is called a callback function and is a function which you give
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Callbacks}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{fscode}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Callbacks}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{fscode2}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Buffers}
+
+Buffers are a class in NodeJS which allows us to deal with big chunks of bytes.\\
+\pause
+Useful for times where you're getting a chunk of bytes in from somewhere e.g. downloading a file or opening a file from your file system
+
+\end{frame}
+
+\begin{frame}{Buffers}
+
+You can make a new buffer with \textit{var myBuffer = new Buffer(BUFFER SIZE);}.\\
+\pause
+You can write to a buffer via \textit{myBuffer.write(CONTENT);}.\\
+\pause
+Most usefully, you can convert a buffer to a string with \textit{myBuffer.toString()}.
+
+\end{frame}
+
+\begin{frame}{The Express framework}
+
+The Express framework is an HTTP server framework for NodeJS with a bunch of really powerful features, making it much stronger than the framework we used last week, 'http'.
 
 
+\end{frame}
+
+\begin{frame}{Hello world in Express}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{express}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Hello world in Express}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{express2}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Hello world in Express}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{express3}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Hello world in Express}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{express4}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Middleware}
+
+One of the strong points of Express is it's middleware capabilities.\pause Middleware is code which is executed inbetween when you get the request and when you deal with it.\pause Some examples of middleware include adding authentication to every request, so only people who are logged in can go to certain places in the site.
+
+\end{frame}
+
+\begin{frame}{Endpoints}
+
+An endpoint is a \textit{destination}. When you go to 127.0.0.1:3000 you are going to the root endpoint \textit{/}.\pause \\
+If instead you go to 127.0.0.1:3000/hello/world, you are going to the endpoint \textit{/hello/world}.
+
+\end{frame}
+
+\begin{frame}{Templates}
+
+Templates are pretty much HTML++.\\ \pause
+They are pre-rendered on the server side and can be passed in values.
+
+\end{frame}
+
+\begin{frame}{EJS}
+
+EJS is a templating language developed to be very strong when paired with javascript (like NodeJS). It mixes normal HTML with embedded javascript which is compiled before it is sent to the client. It looks a little like this:
+
+\begin{figure}[h]
+\includegraphics[width=0.6\textwidth]{ejs}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Putting it all together}
 
 \end{frame}
 
@@ -215,10 +321,10 @@ The "bit of code" is called a callback function and is a function which you give
 \begin{frame}{That's all for tonight!}
   To summarise:
   \begin{itemize}
-  \item We have installed NodeJS and NPM
-  \item We have learnt about JS syntax
-  \item We have learnt about NodeJS and what it's useful for
-  \item We have made a very simple http server
+  \item We have learnt about callbacks and the NodeJS event loop
+  \item We have learnt about buffers
+  \item We have learnt about the Express framework
+  \item We have made a complex server using Express
   \end{itemize}
 \end{frame}
 
