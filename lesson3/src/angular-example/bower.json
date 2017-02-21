@@ -1,0 +1,25 @@
+{
+  "name": "my-angular-example",
+  "homepage": "https://github.com/Casper-Oakley/nodejs-lessons",
+  "authors": [
+    "Casper Oakley <casper_oakley@hotmail.com>"
+  ],
+  "description": "An example of a basic few things you can do in angular",
+  "main": "index.js",
+  "keywords": [
+    "angular",
+    "example"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}

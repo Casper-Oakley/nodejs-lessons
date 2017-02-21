@@ -1,0 +1,41 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ChatR -  The place to chat!</title>
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    
+  </head>
+  
+  <body>
+    <div ng-app="chatr" ng-controller="chatbox">
+      <div class="message-box">
+        <ul>
+          <li ng-repeat="x in messages">
+            <div class="message">
+              <span ng-bind="x.user"></span>:<span ng-bind="' ' + x.message"></span>
+            </div>
+            <hr>
+          </li>
+        </ul>
+      </div>
+      <div class="reply-box">
+        <form ng-submit="sendMessage()">
+        <input type="text" ng-model="newMessage">
+        <input type="submit" value="Send">
+        </form>
+        <hr>
+        Username:
+        <input type="text" ng-model="username">
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "chatr",
+  "version": "0.0.1",
+  "description": "A simple web chatbox",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodejs app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casper-oakley/nodejs-lessons.git"
+  },
+  "keywords": [
+    "chat",
+    "mean",
+    "angular",
+    "nodejs"
+  ],
+  "author": "Casper Oakley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/casper-oakley/nodejs-lessons/issues"
+  },
+  "homepage": "https://github.com/casper-oakley/nodejs-lessons#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4",
+    "socket.io": "^1.7.3"
+  }
+}
